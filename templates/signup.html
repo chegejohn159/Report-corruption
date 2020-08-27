@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+
+{% block content%}
+
+<div id="up" class=" container-fluid">
+<div class="row">
+
+
+<div style="margin-top: 30px; margin-bottom: 90px;" class="col-12 offset-0 col-md-8 offset-md-2" >
+
+<div class="card " style="text-align: center; height: 100%;">
+	<div class="card-header bg-info">
+		<H2 class="">Register</H2>
+	</div>
+	<div class="card-body bg-light">
+
+		<form style=" height: 100%;" class="form-horizontal row" role="form" action="" method="post">
+{% csrf_token %}
+
+<div class="col-10">
+	
+	 <p class="form-group" style="text-align: center;">
+		<label>Fisrt Name</label>
+ 	{{ form.firstname }}  
+ </p>
+ <p class="form-group" style="text-align: center;">
+	<label>Last Name</label>
+ 	{{ form.lastname }}  
+ </p>
+ <p class="form-group" style="text-align: center;">
+	<label>National Id</label>
+	{{ form.national_id }}  
+</p>
+<p class="form-group" style="text-align: center;">
+	<label>Email Address</label>
+	{{ form.email }}  
+</p>
+ <!-- <p class="form-group" style="text-align: center;">
+	<label>Email</label>
+ 	{{ form.email }}  
+ </p> -->
+	<p class="form-group" style="text-align: center;">
+		<label>Password</label>
+ 	{{ form.password }}  
+ </p>
+ <p class="col-1 offset-5">
+  	<button  type="submit" class="btn btn-primary">Register</button>
+  	</p>
+</div>
+<div class="col-6">
+	
+  
+</div>
+  
+
+  <p class="row">
+  	
+  </p>
+
+</form>
+		
+	</div>
+	
+	
+</div>
+
+</div>
+
+</div>
+</div>
+
+{% endblock content%}
+

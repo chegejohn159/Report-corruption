@@ -1,0 +1,20 @@
+ {% extends "base.html" %} {% load crispy_forms_tags %}{% block content%}
+<div class="container jumbotron" style="margin-top: 70px; margin-bottom: 150px;">
+    <h2>Add a category</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p class="form-group" style="text-align: center;">
+            {{ form.corruption|as_crispy_field }}
+        </p>
+        <p class="form-group" style="text-align: center;">
+            {{ form.description|as_crispy_field }}
+        </p>
+
+
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+
+{% endblock content%}

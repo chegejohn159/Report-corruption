@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+{% block content%}
+<div id="up" class=" container-fluid">
+<div id="up" class="row">
+
+
+<div  style="margin-top: 30px;" class="col-10 col-md-6 offset-md-3 offset-1 " >
+
+<div class="card " style="text-align: center;">
+	<div class="card-header bg-info">
+		<H2 class="">Login</H2>
+	</div>
+	<div class="card-body bg-light">
+		<form class="form-horizontal " role="form" action="" method="post">
+{% csrf_token %}
+
+ 
+  <p class="form-group" style="text-align: center;">
+	<label>Email Address</label>
+ 	{{ form.username}}  
+ </p>
+  <p class="form-group" style="text-align: center;">
+	<label>Password</label>
+ 	{{ form.password}}  
+ </p>
+
+  <div style="margin-top: 10px;">
+  	<input type="submit" class="btn btn-primary" value="Login"/>
+  </div>
+
+</form>
+		
+	</div>
+	<div class="card-footer bg-info">
+		<p style="" class="">Only Registered police can login
+<a style="color: white;" class="btn bg-dark" href="/">Back to Home</a>
+
+		</p>
+	</div>
+	
+</div>
+
+</div>
+
+</div>
+</div>
+
+{% endblock content%}

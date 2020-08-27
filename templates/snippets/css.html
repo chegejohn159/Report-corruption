@@ -1,0 +1,42 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'fa/css/all.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+
+<style type="text/css">
+    input[type=text],
+    input[type=password] {
+        width: 90%;
+        padding: 5px;
+        border: none;
+        background: #f1f1f1;
+    }
+    
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    
+    #home {
+        margin-bottom: 0px;
+        height: 100vh;
+        width: 100%;
+        background: url({% static 'images/diana.jpg' %}) no-repeat center center fixed;
+        position: relative;
+        background-size: cover;
+    }
+    
+    #up {
+        margin-top: 60px;
+        height: 100vh;
+        width: 100%;
+        background: url({% static 'img/diana.jpg' %}) no-repeat center center fixed;
+        position: relative;
+        background-size: cover;
+    }
+    
+    #tron {
+        margin-top: 90px;
+    }
+</style>
