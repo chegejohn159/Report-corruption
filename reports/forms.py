@@ -9,8 +9,8 @@ class corruptions(forms.ModelForm):
 	county=forms.ModelChoiceField(queryset=county.objects.all(),initial='')
 	description=forms.CharField(max_length=2000,widget=forms.Textarea())
 	cityortown=forms.CharField(widget=forms.TextInput(attrs={'size':30,'placeholder':'City or Town'}))
-	name=forms.CharField(widget=forms.TextInput(attrs={'size':30,'placeholder':'Full name (Optional)'}))
-	phone=forms.CharField(widget=forms.TextInput(attrs={'size':30,'placeholder':'Phone number (Optional)'}))
+	name=forms.CharField(required=False,widget=forms.TextInput(attrs={'size':30,'placeholder':'Full name (Optional)'}))
+	phone=forms.CharField(required=False,widget=forms.TextInput(attrs={'size':30,'placeholder':'Phone number (Optional)'}))
 	class Meta:
 		model = corruption
 		fields = ('complain','corruptiontype', 'entity','county','description','cityortown','name','phone')

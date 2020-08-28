@@ -51,19 +51,12 @@ def signu(request):
 def Eaccsignup(request):
     if request.method == 'POST':
         form = eaccsignup(request.POST)
-
-
         if form.is_valid():
-
             user = form.save()
-            #user.is_staff=True
-            #user.is_superuser=True
             user.is_Eacc=True
             user.set_password(user.password)
             user.save()
-            
-            #form.save()
-            return redirect('/cat/')
+            return redirect('/')
     else:
         form = eaccsignup()
     return render(request, 'Eaccsignup.html', {'form': form})
